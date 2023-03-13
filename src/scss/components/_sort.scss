@@ -1,0 +1,99 @@
+@import "../variables";
+
+.sort {
+  position: relative;
+  &__label {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 8px;
+      transform: rotate(90deg);
+
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
+
+    b {
+      margin-right: 8px;
+      width: 121px;
+    }
+
+    span {
+      color: $orange;
+      border-bottom: 1px dashed $orange;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+
+    button {
+      text-align: center;
+      font-size: 20px;
+      line-height: 24px;
+      width: 25px;
+      height: 25px;
+      border: 1px solid #fe5f1e;
+      border-radius: 5px;
+      margin-right: 2px;
+      cursor: pointer;
+      background-color: white;
+      color: #fe5f1e;
+      position: relative;
+
+      &:hover {
+        background-color: #fe5f1e;
+        color: white;
+      }
+
+      &::after {
+        content: attr(value);
+        position: absolute;
+        line-height: 16px;
+        left: -2em;
+        top: -4em;
+        font-size: 10px;
+        border-radius: 10px;
+        padding: 5px;
+        color: #000;
+        opacity: 0;
+        transition: 0.5s;
+        pointer-events: none;
+      }
+      &:hover::after {
+        opacity: 1;
+        left: -2em;
+        top: -4em;
+      }
+    }
+  }
+
+  &__popup {
+    position: absolute;
+    right: 0;
+    margin-top: 15px;
+    background: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+
+    ul {
+      overflow: hidden;
+      li {
+        padding: 12px 20px;
+        cursor: pointer;
+
+        &.active,
+        &:hover {
+          background: rgba(254, 95, 30, 0.05);
+        }
+
+        &.active {
+          font-weight: bold;
+          color: $orange;
+        }
+      }
+    }
+  }
+}
