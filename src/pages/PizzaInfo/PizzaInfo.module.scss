@@ -6,6 +6,11 @@
   column-gap: 40px;
   margin-bottom: 10px;
 
+  @media (max-width: 640px) {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
   img {
     height: 250px;
     width: 250px;

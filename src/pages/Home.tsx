@@ -5,25 +5,21 @@ import Sort from "../components/Sort";
 import Categories from "../components/Categories";
 import Pagination from "../components/Pagination";
 import ErrorMessage from "../components/ErrorMessage";
-import { useAppDispatch, useAppSelector } from "../shared/hooks/hooks";
-import {
-  filterSelector,
-  QueryString,
-  setCategoryId,
-  setCurrentPage,
-  setFilters,
-  setSort,
-  SortProperty,
-} from "../redux/slices/filterSlice";
-import { fetchPizzas, itemsSelector, Status } from "../redux/slices/itemsSlice";
-import { useDebounce } from "../shared/hooks/useDebounce";
+import { useAppDispatch, useAppSelector } from "../app/hooks/hooks";
+import { useDebounce } from "../app/hooks/useDebounce";
 import { useSearchParams } from "react-router-dom";
+import { selectFilter } from "../redux/filter/selectors";
+import { setCategoryId, setCurrentPage, setFilters, setSort } from "../redux/filter/slice";
+import { QueryString, SortProperty } from "../redux/filter/types";
+import { selectItems } from "../redux/items/selectors";
+import { fetchPizzas } from "../redux/items/asyncActions";
+import { Status } from "../redux/items/types";
 
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();
   const { categoryId, sort, order, searchValue, currentPage } =
-    useAppSelector(filterSelector);
-  const { items, status } = useAppSelector(itemsSelector);
+    useAppSelector(selectFilter);
+  const { items, status } = useAppSelector(selectItems);
   const debouncedSearchValue = useDebounce(searchValue, 250); // Значение из поиска с задержкой в 250 мс
 
   // Логика запроса пицц с бэкенда

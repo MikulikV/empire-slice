@@ -33,7 +33,7 @@ const PizzaInfo: React.FC = () => {
   }, []);
 
   if (!pizza) {
-    return <h4>Loading ...</h4>;
+    return <div className={styles.description}>Loading ...</div>;
   }
 
   return (

@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { addItem, CartItemType, cartItemSelector } from "../../redux/slices/cartSlice";
-import { Pizza } from "../../redux/slices/itemsSlice";
-import { useAppDispatch, useAppSelector } from "../../shared/hooks/hooks";
+import { useAppDispatch, useAppSelector } from "../../app/hooks/hooks";
+import { selectCartItem } from "../../redux/cart/selectors";
+import { addItem } from "../../redux/cart/slice";
+import { CartItemType } from "../../redux/cart/types";
+import { Pizza } from "../../redux/items/types";
 
 const typeNames: string[] = ["тонкое", "традиционное"];
 
@@ -11,7 +13,7 @@ const PizzaBlock: React.FC<Pizza> = ({ id, title, price, imageUrl, sizes, types 
   const [activeSize, setActiveSize] = React.useState<number>(0);
   const dispatch = useAppDispatch();
   const cartItem = useAppSelector(
-    cartItemSelector(id, sizes[activeSize], typeNames[activeType])
+    selectCartItem(id, sizes[activeSize], typeNames[activeType])
   );
 
   const onClickAdd = () => {
@@ -22,7 +24,7 @@ const PizzaBlock: React.FC<Pizza> = ({ id, title, price, imageUrl, sizes, types 
       imageUrl,
       size: sizes[activeSize],
       type: typeNames[activeType],
-      count: 0 // на время
+      count: 0
     };
     dispatch(addItem(item));
   };
@@ -38,8 +40,8 @@ const PizzaBlock: React.FC<Pizza> = ({ id, title, price, imageUrl, sizes, types 
           {types.map((type, i) => (
             <li
               key={i}
-              className={activeType === i ? "active" : ""}
-              onClick={() => setActiveType(i)}
+              className={activeType === type ? "active" : ""}
+              onClick={() => setActiveType(type)}
             >
               {typeNames[type]}
             </li>

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/img/pizza-logo.svg";
-import { cartSelector } from "../redux/slices/cartSlice";
-import { useAppSelector } from "../shared/hooks/hooks";
+import { useAppSelector } from "../app/hooks/hooks";
 import Search from "./Search";
+import { selectCart } from "../redux/cart/selectors";
 
 const Header: React.FC = () => {
-  const { totalPrice, totalCount } = useAppSelector(cartSelector);
+  const { totalPrice, totalCount } = useAppSelector(selectCart);
   const location = useLocation();
 
   return (
@@ -22,7 +22,7 @@ const Header: React.FC = () => {
           </div>
         </Link>
         {location.pathname === "/" && <Search />}
-        <div className="header__cart">
+        {location.pathname !== "/cart" && <div className="header__cart">
           <Link to="/cart" className="button button--cart">
             <span>{totalPrice} ₽</span>
             <div className="button__delimiter"></div>
@@ -58,6 +58,7 @@ const Header: React.FC = () => {
             <span>{totalCount}</span>
           </Link>
         </div>
+        }
       </div>
     </div>
   );

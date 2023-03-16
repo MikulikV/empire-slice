@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import PizzaInfo from "./components/PizzaBlock/PizzaInfo";
+import PizzaInfo from "./pages/PizzaInfo";
 import MainLayout from "./layouts/MainLayout";
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";

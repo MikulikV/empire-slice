@@ -1,14 +1,12 @@
 import React from "react";
-import {
-  searchValueSelector,
-  setSearchValue,
-} from "../../redux/slices/filterSlice";
-import { useAppDispatch, useAppSelector } from "../../shared/hooks/hooks";
+import { useAppDispatch, useAppSelector } from "../../app/hooks/hooks";
+import { selectSearchValue } from "../../redux/filter/selectors";
+import { setSearchValue } from "../../redux/filter/slice";
 import styles from "./Search.module.scss";
 
 const Search: React.FC = () => {
   const dispatch = useAppDispatch();
-  const searchValue = useAppSelector(searchValueSelector);
+  const searchValue = useAppSelector(selectSearchValue);
   const inputRef = React.useRef<HTMLInputElement>(null);
 
   const onChangeSearch = (e: React.ChangeEvent<HTMLInputElement>) => {

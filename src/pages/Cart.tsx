@@ -2,12 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CartEmpty from "../components/CartBlock/CartEmpty";
 import CartItem from "../components/CartBlock/CartItem";
-import { cartSelector, clearItems } from "../redux/slices/cartSlice";
-import { useAppDispatch, useAppSelector } from "../shared/hooks/hooks";
+import { useAppDispatch, useAppSelector } from "../app/hooks/hooks";
+import { selectCart } from "../redux/cart/selectors";
+import { clearItems } from "../redux/cart/slice";
 
 const Cart: React.FC = () => {
   const dispatch = useAppDispatch();
-  const { totalPrice, totalCount, items } = useAppSelector(cartSelector);
+  const { totalPrice, totalCount, items } = useAppSelector(selectCart);
 
   const onClickCLear = () => {
     if (window.confirm("Вы действительно хотите очистить корзину?")) {
@@ -57,7 +58,7 @@ const Cart: React.FC = () => {
             </svg>
             Корзина
           </h2>
-          <div className="cart__clear" onClick={onClickCLear}>
+          <button className="cart__clear" onClick={onClickCLear}>
             <svg
               width="20"
               height="20"
@@ -95,7 +96,7 @@ const Cart: React.FC = () => {
               />
             </svg>
             <span>Очистить корзину</span>
-          </div>
+          </button>
         </div>
         <div className="content-cart__items">
           {cartItems}

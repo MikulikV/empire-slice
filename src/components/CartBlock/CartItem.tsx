@@ -1,6 +1,7 @@
 import React from "react";
-import { addItem, CartItemType, reduceItem, removeItem } from "../../redux/slices/cartSlice";
-import { useAppDispatch } from "../../shared/hooks/hooks";
+import { useAppDispatch } from "../../app/hooks/hooks";
+import { addItem, reduceItem, removeItem } from "../../redux/cart/slice";
+import { CartItemType } from "../../redux/cart/types";
 
 const CartItem: React.FC<CartItemType> = ({
   id,

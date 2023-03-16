@@ -1,6 +1,7 @@
 import React from "react";
-import { setOrder, SortProperty } from "../redux/slices/filterSlice";
-import { useAppDispatch } from "../shared/hooks/hooks";
+import { useAppDispatch } from "../app/hooks/hooks";
+import { setOrder } from "../redux/filter/slice";
+import { SortProperty } from "../redux/filter/types";
 
 type SortPropsType = {
   value: SortProperty
