@@ -78,6 +78,7 @@ const Home: React.FC = () => {
     // eslint-disable-next-line
   }, [debouncedSearchValue, currentPage, categoryId, sort, order]);
 
+
   const changeCategory = React.useCallback((idx: number) => {
     dispatch(setCategoryId(idx));
     // eslint-disable-next-line 

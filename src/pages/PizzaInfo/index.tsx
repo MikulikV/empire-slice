@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import styles from "./PizzaInfo.module.scss";
 
 type PizzaType = {
@@ -37,16 +37,21 @@ const PizzaInfo: React.FC = () => {
   }
 
   return (
-    <div className={styles.description}>
-      <img src={pizza.imageUrl} alt="Pizza" />
-      <div>
-        <h2 className={styles.title}>{pizza.title}</h2>
-        <p>{pizza.ingridients}</p>
-        <h3>
-          <span>от</span> {pizza.price} ₽
-        </h3>
-        <div className={styles.rating}>Рейтинг: {pizza.rating}</div>
+    <div className={styles.root}>
+      <div className={styles.description}>
+        <img src={pizza.imageUrl} alt="Pizza" />
+        <div>
+          <h2 className={styles.title}>{pizza.title}</h2>
+          <p>{pizza.ingridients}</p>
+          <h3>
+            <span>от</span> {pizza.price} ₽
+          </h3>
+          <div className={styles.rating}>Рейтинг: {pizza.rating}</div>
+        </div>
       </div>
+      <Link to="/">
+        <button className="button">Вернуться на главную</button>
+      </Link>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./NotFoundBlock.module.scss";
 
 const NotFoundBlock: React.FC = () => {
@@ -12,6 +13,9 @@ const NotFoundBlock: React.FC = () => {
       <p className={styles.description}>
         К сожалению данная страница отсутствует в нашем интернет-магазине
       </p>
+      <Link to="/">
+        <button className="button">Вернуться на главную</button>
+      </Link>
     </div>
   );
 }

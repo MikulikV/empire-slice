@@ -7,8 +7,16 @@
   span {
     font-size: 64px;
   }
-}
 
-.description {
-  font-size: 22px;
+  .description {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  button {
+    padding: 12px 0 14px;
+    width: 230px;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 18px;
+  }
 }
