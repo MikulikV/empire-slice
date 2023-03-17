@@ -1,19 +1,22 @@
 import React from "react";
+import { useAppDispatch, useAppSelector } from "../app/hooks/hooks";
+import { useDebounce } from "../app/hooks/useDebounce";
+import { useSearchParams } from "react-router-dom";
+
 import PizzaBlock from "../components/PizzaBlock";
 import Skeleton from "../components/PizzaBlock/Skeleton";
 import Sort from "../components/Sort";
 import Categories from "../components/Categories";
 import Pagination from "../components/Pagination";
 import ErrorMessage from "../components/ErrorMessage";
-import { useAppDispatch, useAppSelector } from "../app/hooks/hooks";
-import { useDebounce } from "../app/hooks/useDebounce";
-import { useSearchParams } from "react-router-dom";
+
 import { selectFilter } from "../redux/filter/selectors";
 import { setCategoryId, setCurrentPage, setFilters, setSort } from "../redux/filter/slice";
 import { QueryString, SortProperty } from "../redux/filter/types";
 import { selectItems } from "../redux/items/selectors";
 import { fetchPizzas } from "../redux/items/asyncActions";
 import { Status } from "../redux/items/types";
+
 
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();

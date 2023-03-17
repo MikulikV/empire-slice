@@ -1,5 +1,5 @@
 import React from "react";
-import ThemeConfig from "../config/Theme.config";
+import { ThemeConfig } from "../config/Theme.config";
 import { Pagination } from "@mui/material";
 
 type PagintionPropsType = {

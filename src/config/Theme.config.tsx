@@ -12,8 +12,7 @@ type ThemePropType = {
   children: JSX.Element
 };
 
-const ThemeConfig: React.FC<ThemePropType> = ({ children }) => {
+export const ThemeConfig: React.FC<ThemePropType> = ({ children }) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
 
-export default ThemeConfig;
