@@ -55,8 +55,8 @@ const Home: React.FC = () => {
   React.useEffect(() => {
     if (
       searchParams.has("page") &&
-      searchParams.toString() !==
-      "page=1&category=0&sortBy=rating&order=desc" // Data from filterSlice initial state
+      (searchParams.toString() !==
+        "page=1&category=0&sortBy=rating&order=desc") // Data from filterSlice initial state
     ) {
       const params = Object.fromEntries([...searchParams]) as QueryString;
       dispatch(setFilters(params));
