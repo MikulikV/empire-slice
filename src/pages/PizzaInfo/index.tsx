@@ -25,7 +25,7 @@ const PizzaInfo: React.FC = () => {
         );
         setPizza(response.data);
       } catch (error) {
-        alert("Произошла ошибка при получении пиццы");
+        alert("There was an error when I received the pizza");
         navigate("/");
       }
     }
@@ -45,13 +45,13 @@ const PizzaInfo: React.FC = () => {
           <h2 className={styles.title}>{pizza.title}</h2>
           <p>{pizza.ingridients}</p>
           <h3>
-            <span>от</span> {pizza.price} ₽
+            <span>from</span> {pizza.price} $
           </h3>
-          <div className={styles.rating}>Рейтинг: {pizza.rating}</div>
+          <div className={styles.rating}>Rating: {pizza.rating}</div>
         </div>
       </div>
       <Link to="/">
-        <button className="button">Вернуться на главную</button>
+        <button className="button">Back to Home page</button>
       </Link>
     </div>
   );

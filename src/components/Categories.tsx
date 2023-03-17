@@ -6,12 +6,12 @@ type CategoriesPropsType = {
 }
 
 const categories: Array<string> = [
-  "Все",
-  "Мясные",
-  "Вегетарианские",
-  "Гриль",
-  "Острые",
-  "Ассорти",
+  "All",
+  "Meat",
+  "Vegeterian",
+  "Grill",
+  "Spicy",
+  "Mix",
 ];
 
 export const Categories: React.FC<CategoriesPropsType> = React.memo(({ value, changeCategory }) => {

@@ -33,7 +33,7 @@ export const Search: React.FC = () => {
         value={searchValue}
         ref={inputRef}
         onChange={onChangeSearch}
-        placeholder="Поиск пиццы..."
+        placeholder="Searching..."
       />
       {searchValue && (
         <svg

@@ -1,0 +1,222 @@
+[
+  {
+    "id": "0",
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+    "title": "Pepperoni Fresh with peppers",
+    "types": [0, 1],
+    "sizes": [6, 10, 14],
+    "price": 19,
+    "category": 4,
+    "rating": 4,
+    "ingridients": "Specialty tomato sauce, mozzarella, spicy chorizo, sweet peppers"
+  },
+  {
+    "id": "1",
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg",
+    "title": "Cheese",
+    "types": [0],
+    "sizes": [6, 14],
+    "price": 12,
+    "category": 2,
+    "rating": 6,
+    "ingridients": "Mozzarella, cheddar and parmesan cheeses, signature alfredo sauce"
+  },
+  {
+    "id": "2",
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/6652fec1-04df-49d8-8744-232f1032c44b.jpg",
+    "title": "BBQ Chicken",
+    "types": [0],
+    "sizes": [6, 14],
+    "price": 14,
+    "category": 1,
+    "rating": 4,
+    "ingridients": "Chicken, bacon, barbecue sauce, red onions, mozzarella, special tomato sauce"
+  },
+  {
+    "id": "3",
+    "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/42360a7dcb7640c998b723231586fe84_366x366.webp",
+    "title": "Cheesy Chicken",
+    "types": [1],
+    "sizes": [6, 10, 14],
+    "price": 12,
+    "category": 1,
+    "rating": 2,
+    "ingridients": "Chicken, mozzarella, cheddar and parmesan cheeses, cheese sauce, tomatoes, signature alfredo sauce, garlic"
+  },
+  {
+    "id": "4",
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg",
+    "title": "Cheeseburger Pizza",
+    "types": [0, 1],
+    "sizes": [6, 10, 14],
+    "price": 15,
+    "category": 3,
+    "rating": 8,
+    "ingridients": "Ham, pickles, tomatoes, red onions, garlic, burger sauce, mozzarella, signature tomato sauce"
+  },
+  {
+    "id": "5",
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
+    "title": "Crazy Pepperoni",
+    "types": [0],
+    "sizes": [10, 14],
+    "price": 16,
+    "category": 4,
+    "rating": 2,
+    "ingridients": "Spicy pepperoni, extra mozzarella, tomatoes, special tomato sauce"
+  },
+  {
+    "id": "6",
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/d2e337e9-e07a-4199-9cc1-501cc44cb8f8.jpg",
+    "title": "Pepperoni",
+    "types": [0, 1],
+    "sizes": [6, 10, 14],
+    "price": 17,
+    "category": 1,
+    "rating": 9,
+    "ingridients": "Spicy pepperoni, extra mozzarella, special tomato sauce"
+  },
+  {
+    "id": "7",
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/d48003cd-902c-420d-9f28-92d9dc5f73b4.jpg",
+    "title": "Margarita",
+    "types": [0, 1],
+    "sizes": [6, 10, 14],
+    "price": 15,
+    "category": 2,
+    "rating": 10,
+    "ingridients": "Enlarged portion of mozzarella, tomatoes, Italian herbs, special tomato sauce"
+  },
+  {
+    "id": "8",
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/ec29465e-606b-4a04-a03e-da3940d37e0e.jpg",
+    "title": "Four Seasons",
+    "types": [0, 1],
+    "sizes": [6, 10, 14],
+    "price": 14,
+    "category": 5,
+    "rating": 10,
+    "ingridients": "Enlarged portion of mozzarella, ham, spicy pepperoni, diced bryndza, tomatoes, mushrooms, Italian herbs, signature tomato sauce"
+  },
+  {
+    "id": "9",
+    "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/30367198-f3bd-44ed-9314-6f717960da07.jpg",
+    "title": "Vegetables and mushrooms 🌱",
+    "types": [0, 1],
+    "sizes": [6, 10, 14],
+    "price": 12,
+    "category": 2,
+    "rating": 7,
+    "ingridients": "Champignons, tomatoes, sweet peppers, red onions, diced bryndza, mozzarella, special tomato sauce, Italian herbs"
+  },
+  {
+    "id": "10",
+    "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/e47fda53ae2441a8850d9a9319ec7071_366x366.webp",
+    "title": "React TS mix",
+    "types": [0, 1],
+    "sizes": [6, 10, 14],
+    "price": 14,
+    "category": 5,
+    "rating": 6,
+    "ingridients": "Bacon, chicken, ham, cheddar and parmesan cheeses, pesto sauce, bryndza cubes, tomatoes, red onions, mozzarella, special alfredo sauce, garlic, Italian herbs"
+  },
+  {
+    "id": "11",
+    "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/18dbb12240b041a191c9dc73c9c1f4ef_366x366.webp",
+    "title": "Meat",
+    "types": [0, 1],
+    "sizes": [6, 10, 14],
+    "price": 18,
+    "category": 1,
+    "rating": 9,
+    "ingridients": "Chicken, ham, spicy pepperoni, spicy chorizo, mozzarella, special tomato sauce"
+  },
+  {
+    "id": "12",
+    "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/50555f951a6d4fd4ac0088c099eb3769_366x366.webp",
+    "title": "Four Cheeses 🌱",
+    "types": [0, 1],
+    "sizes": [6, 10, 14],
+    "price": 14,
+    "category": 2,
+    "rating": 8,
+    "ingridients": "Blue cheese, cheddar and parmesan cheese blend, mozzarella, special alfredo sauce"
+  },
+  {
+    "id": "13",
+    "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/03c840b1ab6f4ccb84f5dc167e146598_366x366.webp",
+    "title": "Diablo 🌶️🌶️",
+    "types": [0, 1],
+    "sizes": [6, 10, 14],
+    "price": 15,
+    "category": 4,
+    "rating": 5,
+    "ingridients": "Spicy chorizo, hot jalapeño peppers, barbecue sauce, mithballs, tomatoes, sweet peppers, red onions, mozzarella, signature tomato sauce"
+  },
+  {
+    "id": "14",
+    "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/10b95b8611ec457dbffd9613b8eb165a_366x366.webp",
+    "title": "BBQ Sausages",
+    "types": [0, 1],
+    "sizes": [6, 10, 14],
+    "price": 14,
+    "category": 4,
+    "rating": 3,
+    "ingridients": "Spicy chorizo, barbecue sauce, tomatoes, red onions, mozzarella, special tomato sauce"
+  },
+  {
+    "id": "15",
+    "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/9b0c599124a8414f89fd59967f3baa3d_366x366.webp",
+    "title": "Hawaiian",
+    "types": [0],
+    "sizes": [6, 14],
+    "price": 14,
+    "category": 1,
+    "rating": 8,
+    "ingridients": "Ham, pineapple, mozzarella, special tomato sauce"
+  },
+  {
+    "id": "16",
+    "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/e379c72af6c54f81b7b4e6ffbb2b1729_366x366.webp",
+    "title": "Chicken Ranch",
+    "types": [0, 1],
+    "sizes": [6, 10, 14],
+    "price": 15,
+    "category": 1,
+    "rating": 6,
+    "ingridients": "Chicken, ham, ranch sauce, mozzarella, tomatoes, garlic"
+  },
+  {
+    "id": "17",
+    "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/c8ac7d2eb95b4bd0b8bc2f366415896c_366x366.webp",
+    "title": "Curry Chicken",
+    "types": [0, 1],
+    "sizes": [6, 10, 14],
+    "price": 14,
+    "category": 1,
+    "rating": 4,
+    "ingridients": "Chicken, pineapples, curry sauce, red onions, sweet peppers, mozzarella, signature tomato sauce"
+  },
+  {
+    "id": "18",
+    "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/5907951b8bf848b2b3bf0ead39b84ab1_366x366.webp",
+    "title": "Arriva!",
+    "types": [0, 1],
+    "sizes": [6, 10, 14],
+    "price": 14,
+    "category": 4,
+    "rating": 7,
+    "ingridients": "Chicken, spicy chorizo, burger sauce, sweet peppers, red onions, tomatoes, mozzarella, ranch sauce, garlic"
+  },
+  {
+    "id": "19",
+    "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/9f97c31be5ed477db2dd842f42e80816_366x366.webp",
+    "title": "Meat Mix",
+    "types": [0, 1],
+    "sizes": [6, 10, 14],
+    "price": 15,
+    "category": 5,
+    "rating": 3,
+    "ingridients": "Baked pork burger, spicy chorizo, spicy pepperoni, bacon, mozzarella, special tomato sauce"
+  }
+]

@@ -13,9 +13,9 @@ type SortType = {
 };
 
 const sortList: SortType[] = [
-  { name: "популярности", sortProperty: "rating" },
-  { name: "цене", sortProperty: "price" },
-  { name: "алфавиту", sortProperty: "title" },
+  { name: "favourite", sortProperty: "rating" },
+  { name: "price", sortProperty: "price" },
+  { name: "alphabet", sortProperty: "title" },
 ];
 
 export const Sort: React.FC<SortPropsType> = React.memo(({ value, changeSort }) => {
@@ -48,20 +48,20 @@ export const Sort: React.FC<SortPropsType> = React.memo(({ value, changeSort }) 
             fill="#2C2C2C"
           />
         </svg>
-        <b>Сортировка по:</b>
+        <b>Sort by:</b>
         <span
           onClick={() => setOpen(!open)}
         >
           {selectedSort && selectedSort.name}
         </span>
         <button
-          value="По возрастанию"
+          value="lowest"
           onClick={() => dispatch(setOrder("asc"))}
         >
           ↑
         </button>
         <button
-          value="По убыванию"
+          value="highest"
           onClick={() => dispatch(setOrder("desc"))}
         >
           ↓

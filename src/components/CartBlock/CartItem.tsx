@@ -21,7 +21,7 @@ export const CartItem: React.FC<CartItemType> = ({
     dispatch(reduceItem({ id, size, type, price } as CartItemType));
   };
   const onClickRemove = (id: string, size: number, type: string, price: number, count: number) => {
-    if (window.confirm(`Вы действительно хотите удалить пиццу "${title}"?`)) {
+    if (window.confirm(`Do you really want to remove the pizza "${title}"?`)) {
       dispatch(removeItem({ id, size, type, price, count } as CartItemType));
     }
   };
@@ -34,7 +34,7 @@ export const CartItem: React.FC<CartItemType> = ({
       <div className="cart__item-info">
         <h3>{title}</h3>
         <p>
-          {type} тесто, {size} см.
+          {type}, {size} inch.
         </p>
       </div>
       <div className="cart__item-count">
@@ -84,7 +84,7 @@ export const CartItem: React.FC<CartItemType> = ({
         </button>
       </div>
       <div className="cart__item-price">
-        <b>{price} ₽</b>
+        <b>{price} $</b>
       </div>
       <div className="cart__item-remove">
         <button

@@ -10,7 +10,7 @@ const Cart: React.FC = () => {
   const { totalPrice, totalCount, items } = useAppSelector(selectCart);
 
   const onClickCLear = () => {
-    if (window.confirm("Вы действительно хотите очистить корзину?")) {
+    if (window.confirm("Do you really want to empty your cart?")) {
       dispatch(clearItems());
     }
   };
@@ -55,7 +55,7 @@ const Cart: React.FC = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            Корзина
+            Cart
           </h2>
           <button className="cart__clear" onClick={onClickCLear}>
             <svg
@@ -94,7 +94,7 @@ const Cart: React.FC = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            <span>Очистить корзину</span>
+            <span>Clear cart</span>
           </button>
         </div>
         <div className="content-cart__items">
@@ -103,10 +103,10 @@ const Cart: React.FC = () => {
         <div className="cart__bottom">
           <div className="cart__bottom-details">
             <span>
-              Всего пицц: <b>{totalCount} шт.</b>{" "}
+              Total quantity: <b>{totalCount} {(totalCount === 1 ? "item" : "items")}</b>
             </span>
             <span>
-              Сумма заказа: <b>{totalPrice} ₽</b>{" "}
+              Total amount: <b>{totalPrice} $</b>
             </span>
           </div>
           <div className="cart__bottom-buttons">
@@ -129,10 +129,10 @@ const Cart: React.FC = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span>Вернуться назад</span>
+              <span>Go Back</span>
             </Link>
             <button className="button pay-btn">
-              <span>Оплатить сейчас</span>
+              <span>Pay Now</span>
             </button>
           </div>
         </div>

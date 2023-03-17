@@ -3,11 +3,11 @@ import React from "react";
 export const ErrorMessage: React.FC = () => {
   return (
     <div className="content__error-info">
-      <h2>Что-то пошло не так 😕</h2>
+      <h2>Something went wrong 😕</h2>
       <p>
-        Мы уже занимаемся решением данной проблемы
+        We are already dealing with this problem
         <br />
-        Попробуйте повторить попытку позже
+        Try again later
       </p>
     </div>
   );

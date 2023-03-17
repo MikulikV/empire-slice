@@ -69,16 +69,13 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: 1315px) {
+    @media (max-width: 1030px) {
       .categories {
         width: 100%;
         overflow: auto;
         ul {
-          width: 720px;
+          width: 600px;
         }
-      }
-      .sort {
-        padding-left: 20px;
       }
     }
 
@@ -116,11 +113,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    @media (max-width: 500px) {
-      flex-direction: column;
-      gap: 20px;
-    }
   }
 
   .content__title {
@@ -354,13 +346,12 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 210px;
+        width: 190px;
 
         border-color: darken($color: $gray-line, $amount: 10);
 
         span {
           color: darken($color: $gray-line, $amount: 20);
-          font-weight: 500;
           font-weight: 600;
         }
 
@@ -383,9 +374,9 @@ body {
       }
 
       .pay-btn {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 600;
-        width: 210px;
+        width: 190px;
         padding: 16px;
       }
     }

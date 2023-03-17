@@ -8,13 +8,13 @@ export const NotFoundBlock: React.FC = () => {
       <h1>
         <span>😕</span>
         <br />
-        Ничего не найдено
+        Nothing found
       </h1>
       <p className={styles.description}>
-        К сожалению данная страница отсутствует в нашем интернет-магазине
+        Unfortunately, this page is not available in our online store
       </p>
       <Link to="/">
-        <button className="button">Вернуться на главную</button>
+        <button className="button">Back to Home page</button>
       </Link>
     </div>
   );
