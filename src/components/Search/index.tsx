@@ -4,7 +4,7 @@ import { selectSearchValue } from "../../redux/filter/selectors";
 import { setSearchValue } from "../../redux/filter/slice";
 import styles from "./Search.module.scss";
 
-const Search: React.FC = () => {
+export const Search: React.FC = () => {
   const dispatch = useAppDispatch();
   const searchValue = useAppSelector(selectSearchValue);
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -50,4 +50,3 @@ const Search: React.FC = () => {
   );
 }
 
-export default Search;

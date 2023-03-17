@@ -3,7 +3,7 @@ import { useAppDispatch } from "../../app/hooks/hooks";
 import { addItem, reduceItem, removeItem } from "../../redux/cart/slice";
 import { CartItemType } from "../../redux/cart/types";
 
-const CartItem: React.FC<CartItemType> = ({
+export const CartItem: React.FC<CartItemType> = ({
   id,
   title,
   price,
@@ -112,5 +112,3 @@ const CartItem: React.FC<CartItemType> = ({
     </div>
   );
 }
-
-export default CartItem;

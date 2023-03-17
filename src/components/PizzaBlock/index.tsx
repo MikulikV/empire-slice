@@ -8,7 +8,7 @@ import { Pizza } from "../../redux/items/types";
 
 const typeNames: string[] = ["тонкое", "традиционное"];
 
-const PizzaBlock: React.FC<Pizza> = ({ id, title, price, imageUrl, sizes, types }) => {
+export const PizzaBlock: React.FC<Pizza> = ({ id, title, price, imageUrl, sizes, types }) => {
   const [activeType, setActiveType] = React.useState<number>(0);
   const [activeSize, setActiveSize] = React.useState<number>(0);
   const dispatch = useAppDispatch();
@@ -84,5 +84,3 @@ const PizzaBlock: React.FC<Pizza> = ({ id, title, price, imageUrl, sizes, types 
     </div>
   );
 };
-
-export default PizzaBlock;

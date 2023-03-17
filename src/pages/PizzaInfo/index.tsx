@@ -1,10 +1,8 @@
 import React from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-
 import styles from "./PizzaInfo.module.scss";
 import Preloader from "../../app/Preloader";
-
 
 type PizzaType = {
   imageUrl: string

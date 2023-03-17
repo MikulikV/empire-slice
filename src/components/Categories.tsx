@@ -14,7 +14,7 @@ const categories: Array<string> = [
   "Ассорти",
 ];
 
-const Categories: React.FC<CategoriesPropsType> = React.memo(({ value, changeCategory }) => {
+export const Categories: React.FC<CategoriesPropsType> = React.memo(({ value, changeCategory }) => {
   return (
     <div className="categories">
       <ul>
@@ -33,5 +33,3 @@ const Categories: React.FC<CategoriesPropsType> = React.memo(({ value, changeCat
     </div>
   );
 })
-
-export default Categories;

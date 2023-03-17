@@ -1,6 +1,6 @@
 import React from "react";
 
-const ErrorMessage: React.FC = () => {
+export const ErrorMessage: React.FC = () => {
   return (
     <div className="content__error-info">
       <h2>Произошла ошибка 😕</h2>
@@ -11,5 +11,3 @@ const ErrorMessage: React.FC = () => {
     </div>
   );
 }
-
-export default ErrorMessage;

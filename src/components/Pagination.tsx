@@ -7,7 +7,7 @@ type PagintionPropsType = {
   changePage: (page: number) => void
 };
 
-const PaginationBlock: React.FC<PagintionPropsType> = ({ currentPage, changePage }) => {
+export const PaginationBlock: React.FC<PagintionPropsType> = ({ currentPage, changePage }) => {
   return (
     <ThemeConfig>
       <Pagination
@@ -21,5 +21,3 @@ const PaginationBlock: React.FC<PagintionPropsType> = ({ currentPage, changePage
     </ThemeConfig>
   );
 }
-
-export default PaginationBlock;

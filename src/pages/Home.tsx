@@ -2,14 +2,7 @@ import React from "react";
 import { useAppDispatch, useAppSelector } from "../app/hooks/hooks";
 import { useDebounce } from "../app/hooks/useDebounce";
 import { useSearchParams } from "react-router-dom";
-
-import PizzaBlock from "../components/PizzaBlock";
-import Skeleton from "../components/PizzaBlock/Skeleton";
-import Sort from "../components/Sort";
-import Categories from "../components/Categories";
-import Pagination from "../components/Pagination";
-import ErrorMessage from "../components/ErrorMessage";
-
+import { Categories, ErrorMessage, PaginationBlock, PizzaBlock, Skeleton, Sort } from "../components";
 import { selectFilter } from "../redux/filter/selectors";
 import { setCategoryId, setCurrentPage, setFilters, setSort } from "../redux/filter/slice";
 import { QueryString, SortProperty } from "../redux/filter/types";
@@ -111,7 +104,7 @@ const Home: React.FC = () => {
           {status === Status.LOADING ? skeletons : pizzas}
         </div>
       )}
-      <Pagination currentPage={currentPage} changePage={changePage} />
+      <PaginationBlock currentPage={currentPage} changePage={changePage} />
     </>
   );
 };

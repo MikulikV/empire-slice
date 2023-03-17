@@ -2,10 +2,10 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/img/pizza-logo.svg";
 import { useAppSelector } from "../app/hooks/hooks";
-import Search from "./Search";
+import { Search } from "./Search";
 import { selectCart } from "../redux/cart/selectors";
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
   const { totalPrice, totalCount } = useAppSelector(selectCart);
   const location = useLocation();
 
@@ -63,5 +63,3 @@ const Header: React.FC = () => {
     </div>
   );
 };
-
-export default Header;

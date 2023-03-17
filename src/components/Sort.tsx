@@ -18,7 +18,7 @@ const sortList: SortType[] = [
   { name: "алфавиту", sortProperty: "title" },
 ];
 
-const Sort: React.FC<SortPropsType> = React.memo(({ value, changeSort }) => {
+export const Sort: React.FC<SortPropsType> = React.memo(({ value, changeSort }) => {
   const [open, setOpen] = React.useState<boolean>(false);
   const dispatch = useAppDispatch()
   const selectedSort = sortList.find((obj) => obj.sortProperty === value);
@@ -85,5 +85,3 @@ const Sort: React.FC<SortPropsType> = React.memo(({ value, changeSort }) => {
     </div>
   );
 })
-
-export default Sort;
