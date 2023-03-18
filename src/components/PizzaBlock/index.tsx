@@ -20,7 +20,7 @@ export const PizzaBlock: React.FC<Pizza> = ({ id, title, price, imageUrl, sizes,
     const item: CartItemType = {
       id,
       title,
-      price,
+      price: price + 1 * activeSize,
       imageUrl,
       size: sizes[activeSize],
       type: typeNames[activeType],
@@ -60,7 +60,7 @@ export const PizzaBlock: React.FC<Pizza> = ({ id, title, price, imageUrl, sizes,
         </ul>
       </div>
       <div className="pizza-block__bottom">
-        <div className="pizza-block__price">from {price} $</div>
+        <div className="pizza-block__price">from {price + 1 * activeSize} $</div>
         <button
           className="button button--outline button--add"
           onClick={onClickAdd}
