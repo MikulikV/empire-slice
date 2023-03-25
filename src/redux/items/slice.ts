@@ -4,6 +4,7 @@ import { ItemsState, Pizza, Status } from "./types";
 
 const initialState: ItemsState = {
   items: [],
+  xTotalCount: 0,
   status: Status.LOADING,
 };
 
@@ -18,14 +19,17 @@ const itemsSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchPizzas.pending, (state) => {
       state.items = [];
+      state.xTotalCount = 0;
       state.status = Status.LOADING;
     });
     builder.addCase(fetchPizzas.fulfilled, (state, action) => {
-      state.items = action.payload;
+      state.items = action.payload.data;
+      state.xTotalCount = action.payload.xTotalCount;
       state.status = Status.SUCCESS;
     });
     builder.addCase(fetchPizzas.rejected, (state) => {
       state.items = [];
+      state.xTotalCount = 0;
       state.status = Status.ERROR;
     });
   },

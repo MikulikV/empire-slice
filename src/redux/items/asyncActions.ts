@@ -1,15 +1,19 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { QueryString } from "../filter/types";
-import { Pizza } from "./types";
+import { FetchResponse } from "./types";
 
-export const fetchPizzas = createAsyncThunk<Pizza[], QueryString>(
+export const fetchPizzas = createAsyncThunk<FetchResponse, QueryString>(
   "items/fetchByIdStatus",
   async (params, thunkAPI) => {
-    const { search, page, category, sortBy, order } = params;
-    const response = await axios.get<Pizza[]>(
-      `https://63fb1dd12027a45d8d60512e.mockapi.io/items?${search}&page=${page}&limit=6&${category}&sortBy=${sortBy}&order=${order}`
+    const { search, page, category, sortBy, order, pageSize } = params;
+    const response = await axios.get(
+      `https://3vc5mh-8080.csb.app/items?_page=${page}&_limit=${pageSize}&${category}&_sort=${sortBy}&_order=${order}&${search}`
     );
-    return response.data;
+    console.log(response.headers["x-total-count"]);
+    return {
+      data: response.data,
+      xTotalCount: response.headers["x-total-count"],
+    };
   }
 );

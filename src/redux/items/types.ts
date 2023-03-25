@@ -7,6 +7,11 @@ export type Pizza = {
   types: number[];
 };
 
+export interface FetchResponse {
+  data: Pizza[];
+  xTotalCount: number;
+}
+
 export enum Status {
   LOADING = "loading",
   SUCCESS = "success",
@@ -15,5 +20,6 @@ export enum Status {
 
 export interface ItemsState {
   items: Pizza[];
+  xTotalCount: number;
   status: Status;
 }

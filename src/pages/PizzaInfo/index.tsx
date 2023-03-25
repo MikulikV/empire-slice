@@ -21,7 +21,7 @@ const PizzaInfo: React.FC = () => {
     async function fetchPizza() {
       try {
         const response = await axios.get<PizzaType>(
-          `https://63fb1dd12027a45d8d60512e.mockapi.io/items/` + id
+          `https://3vc5mh-8080.csb.app/items/` + id
         );
         setPizza(response.data);
       } catch (error) {

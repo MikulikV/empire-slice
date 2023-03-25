@@ -6,6 +6,7 @@ export type QueryString = {
   sortBy: SortProperty;
   order: "desc" | "asc";
   search?: string;
+  pageSize?: string;
 };
 
 export interface FilterState {
@@ -14,4 +15,5 @@ export interface FilterState {
   order: "desc" | "asc";
   searchValue: string;
   currentPage: number;
+  pageSize: number;
 }

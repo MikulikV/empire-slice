@@ -7,6 +7,7 @@ const initialState: FilterState = {
   order: "desc",
   searchValue: "",
   currentPage: 1,
+  pageSize: 4,
 };
 
 const filterSlice = createSlice({

@@ -7,5 +7,5 @@ export { Search } from "./Search";
 export { Categories } from "./Categories";
 export { ErrorMessage } from "./ErrorMessage";
 export { Header } from "./Header";
-export { PaginationBlock } from "./Pagination";
+export { PaginationBlock } from "./PaginationBlock";
 export { Sort } from "./Sort";

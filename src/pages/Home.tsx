@@ -13,9 +13,9 @@ import { Status } from "../redux/items/types";
 
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();
-  const { categoryId, sort, order, searchValue, currentPage } =
+  const { categoryId, sort, order, searchValue, currentPage, pageSize } =
     useAppSelector(selectFilter);
-  const { items, status } = useAppSelector(selectItems);
+  const { items, xTotalCount, status } = useAppSelector(selectItems);
   const debouncedSearchValue = useDebounce(searchValue, 250); // Значение из поиска с задержкой в 250 мс
 
   // Логика запроса пицц с бэкенда
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
   const isMounted = React.useRef<boolean>(false); // Был ли первый render
   const getPizzas = () => {
     const category = categoryId ? `category=${categoryId}` : "";
-    const search = debouncedSearchValue ? `title=${debouncedSearchValue}` : "";
+    const search = debouncedSearchValue ? `title_like=${debouncedSearchValue}` : "";
     dispatch(
       fetchPizzas({
         search: search,
@@ -32,6 +32,7 @@ const Home: React.FC = () => {
         category: category,
         sortBy: sort,
         order: order,
+        pageSize: String(pageSize),
       })
     );
   };
@@ -104,7 +105,7 @@ const Home: React.FC = () => {
           {status === Status.LOADING ? skeletons : pizzas}
         </div>
       )}
-      <PaginationBlock currentPage={currentPage} changePage={changePage} />
+      <PaginationBlock currentPage={currentPage} count={Math.ceil(xTotalCount / pageSize)} changePage={changePage} />
     </>
   );
 };
