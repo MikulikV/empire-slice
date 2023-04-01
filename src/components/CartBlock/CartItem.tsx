@@ -28,11 +28,11 @@ export const CartItem: React.FC<CartItemType> = ({
 
   return (
     <div className="cart__item">
-      <Link to={`/pizza/${id}`}>
-        <div className="cart__item-img">
+      <div className="cart__item-img">
+        <Link to={`/pizza/${id}`}>
           <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
-        </div>
-      </Link>
+        </Link>
+      </div>
       <div className="cart__item-info">
         <h3>{title}</h3>
         <p>
