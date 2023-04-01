@@ -1,3 +1,4 @@
+export { ClearButton } from "./CartBlock/ClearButton";
 export { CartEmpty } from "./CartBlock/CartEmpty";
 export { CartItem } from "./CartBlock/CartItem";
 export { NotFoundBlock } from "./NotFoundBlock";

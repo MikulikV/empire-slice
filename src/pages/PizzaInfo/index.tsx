@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import styles from "./PizzaInfo.module.scss";
 import { Preloader } from "../../app/Preloader";
@@ -28,8 +28,8 @@ const PizzaInfo: React.FC = () => {
 
   if (!pizza) {
     return open ?
-      <Alert severity="error" sx={{ alignItems: "center" }} onClose={() => { setOpen(false); navigate("/") }}>
-        <AlertTitle>Error</AlertTitle>
+      <Alert severity="error" sx={{ alignItems: "center", fontSize: "16px" }} onClose={() => { setOpen(false); navigate("/") }}>
+        <AlertTitle sx={{ fontSize: "22px" }}>Error</AlertTitle>
         There was an error when I received the pizza
       </Alert>
       : <Preloader />;
@@ -47,9 +47,7 @@ const PizzaInfo: React.FC = () => {
             <div className={styles.rating}>Rating: {pizza.rating}</div>
           </div>
         </div>
-        <Link to="/">
-          <button className="button">Back to Home page</button>
-        </Link>
+        <button className="button" onClick={() => navigate(-1)}>Go Back</button>
       </div>
     );
   }
