@@ -3,8 +3,8 @@ import { fetchPizzas } from "./asyncActions";
 import { ItemsState, Pizza, Status } from "./types";
 
 const initialState: ItemsState = {
-  items: [],
-  xTotalCount: 0,
+  items: [], // all pizzas sorted by selected category per one page
+  xTotalCount: 0, // total count of pizzas sorted by selected category
   status: Status.LOADING,
 };
 
@@ -17,6 +17,7 @@ const itemsSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
+    // extraREducers for fetchPizzas on Home page
     builder.addCase(fetchPizzas.pending, (state) => {
       state.items = [];
       state.xTotalCount = 0;

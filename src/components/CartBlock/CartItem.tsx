@@ -21,7 +21,7 @@ export const CartItem: React.FC<CartItemType> = ({
     dispatch(reduceItem({ id, size, type, price } as CartItemType));
   };
   const onClickRemove = (id: string, size: number, type: string, price: number, count: number) => {
-    if (window.confirm(`Do you really want to remove the pizza "${title}"?`)) {
+    if (window.confirm(`Do you really want to remove the "${title}" pizza?`)) {
       dispatch(removeItem({ id, size, type, price, count } as CartItemType));
     }
   };

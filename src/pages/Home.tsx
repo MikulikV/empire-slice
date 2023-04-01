@@ -10,7 +10,6 @@ import { selectItems } from "../redux/items/selectors";
 import { fetchPizzas } from "../redux/items/asyncActions";
 import { Status } from "../redux/items/types";
 
-
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();
   const { categoryId, sort, order, searchValue, currentPage, pageSize } =
@@ -49,8 +48,7 @@ const Home: React.FC = () => {
       setSearchParams(params);
     }
     isMounted.current = true;
-    // eslint-disable-next-line
-  }, [categoryId, sort, order, currentPage]);
+  }, [categoryId, sort, order, currentPage]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Если был первый render, то проверяем URL параметры и сохраняем их в redux
   React.useEffect(() => {
@@ -63,8 +61,7 @@ const Home: React.FC = () => {
       dispatch(setFilters(params));
       isQuery.current = true;
     }
-    // eslint-disable-next-line
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Если был первый render, то запрашиваем пиццы
   React.useEffect(() => {
@@ -72,18 +69,15 @@ const Home: React.FC = () => {
       getPizzas();
     }
     isQuery.current = false;
-    // eslint-disable-next-line
-  }, [debouncedSearchValue, currentPage, categoryId, sort, order]);
+  }, [debouncedSearchValue, currentPage, categoryId, sort, order]); // eslint-disable-line react-hooks/exhaustive-deps
 
 
   const changeCategory = React.useCallback((idx: number) => {
     dispatch(setCategoryId(idx));
-    // eslint-disable-next-line 
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   const changeSort = React.useCallback((sortProperty: SortProperty) => {
     dispatch(setSort(sortProperty));
-    // eslint-disable-next-line 
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   const changePage = (page: number) => {
     dispatch(setCurrentPage(page));
   };

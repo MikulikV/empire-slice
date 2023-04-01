@@ -5,6 +5,8 @@ export type Pizza = {
   imageUrl: string;
   sizes: number[];
   types: number[];
+  ingridients?: string;
+  rating?: number;
 };
 
 export interface FetchResponse {
