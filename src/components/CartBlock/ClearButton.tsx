@@ -35,7 +35,7 @@ export const ClearButton: React.FC<ClearButtonProp> = ({ buttonClassName, childr
         setOpen(false);
     };
 
-    const handleClickAgree = () => {
+    const handleClickConfirm = () => {
         onClickButton();
         setOpen(false)
     }
@@ -59,8 +59,8 @@ export const ClearButton: React.FC<ClearButtonProp> = ({ buttonClassName, childr
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleClose}>Disagree</Button>
-                    <Button onClick={handleClickAgree}>Agree</Button>
+                    <Button onClick={handleClose}>Cancel</Button>
+                    <Button onClick={handleClickConfirm}>Confirm</Button>
                 </DialogActions>
             </Dialog>
         </div >
