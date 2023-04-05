@@ -5,6 +5,7 @@ import styles from "./PizzaInfo.module.scss";
 import { Preloader } from "../../app/Preloader";
 import { Pizza } from "../../redux/items/types";
 import { Alert, AlertTitle } from "@mui/material";
+import { StyledRating } from "../../config/Theme.config";
 
 const PizzaInfo: React.FC = () => {
   const { id } = useParams<string>();
@@ -44,7 +45,12 @@ const PizzaInfo: React.FC = () => {
             <h3>
               <span>from</span> {pizza.price} $
             </h3>
-            <div className={styles.rating}>Rating: {pizza.rating}</div>
+            <StyledRating
+              name="half-rating-read"
+              defaultValue={pizza.rating ? pizza.rating / 2 : 0}
+              precision={0.5}
+              size={"large"}
+              readOnly />
           </div>
         </div>
         <button className="button" onClick={() => navigate(-1)}>Go Back</button>
