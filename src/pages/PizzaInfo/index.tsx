@@ -17,7 +17,7 @@ const PizzaInfo: React.FC = () => {
     async function fetchPizza() {
       try {
         const response = await axios.get<Pizza>(
-          `https://3vc5mh-8080.csb.app/items/` + id
+          `https://my-json-server.typicode.com/MikulikV/react-pizza-database/items/` + id
         );
         setPizza(response.data);
       } catch (error) {
@@ -43,7 +43,7 @@ const PizzaInfo: React.FC = () => {
             <h2 className={styles.title}>{pizza.title}</h2>
             <p>{pizza.ingridients}</p>
             <h3>
-              <span>from</span> {pizza.price} $
+              <span>from</span> ${pizza.price}
             </h3>
             <StyledRating
               name="half-rating-read"
