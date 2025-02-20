@@ -110,7 +110,7 @@ const Cart: React.FC = () => {
               Total quantity: <b>{totalCount} {(totalCount === 1 ? "item" : "items")}</b>
             </span>
             <span>
-              Total amount: <b>{totalPrice} $</b>
+              Total amount: <b>${totalPrice}</b>
             </span>
           </div>
           <div className="cart__bottom-buttons">

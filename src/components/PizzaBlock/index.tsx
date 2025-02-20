@@ -60,7 +60,7 @@ export const PizzaBlock: React.FC<Pizza> = ({ id, title, price, imageUrl, sizes,
         </ul>
       </div>
       <div className="pizza-block__bottom">
-        <div className="pizza-block__price">from {price + 1 * activeSize} $</div>
+        <div className="pizza-block__price">from ${price + 1 * activeSize}</div>
         <button
           className="button button--outline button--add"
           onClick={onClickAdd}
@@ -77,7 +77,7 @@ export const PizzaBlock: React.FC<Pizza> = ({ id, title, price, imageUrl, sizes,
               fill="white"
             />
           </svg>
-          <span>Add to cart</span>
+          <span> Add </span>
           {cartItem && <i>{cartItem.count}</i>}
         </button>
       </div>
