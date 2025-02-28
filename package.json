@@ -1,8 +1,8 @@
 {
-  "name": "react-pizza",
+  "name": "empire-slice",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mikulikv.github.io/react-pizza/",
+  "homepage": "https://mikulikv.github.io/empire-slice/",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
