@@ -9,7 +9,7 @@ export const fetchPizzas = createAsyncThunk<FetchResponse, QueryString>(
   async (params, thunkAPI) => {
     const { search, page, category, sortBy, order, pageSize } = params;
     const response = await axios.get(
-      `https://my-json-server.typicode.com/MikulikV/react-pizza-database/items?_page=${page}&_limit=${pageSize}&${category}&_sort=${sortBy}&_order=${order}&${search}`
+      `https://my-json-server.typicode.com/MikulikV/empire-slice-database/items?_page=${page}&_limit=${pageSize}&${category}&_sort=${sortBy}&_order=${order}&${search}`
     );
     return {
       // возвращается массив пицц на одну страницу

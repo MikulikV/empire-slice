@@ -17,7 +17,7 @@ const PizzaInfo: React.FC = () => {
     async function fetchPizza() {
       try {
         const response = await axios.get<Pizza>(
-          `https://my-json-server.typicode.com/MikulikV/react-pizza-database/items/` + id
+          `https://my-json-server.typicode.com/MikulikV/empire-slice-database/items/` + id
         );
         setPizza(response.data);
       } catch (error) {
