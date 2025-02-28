@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/empire-slice/static/css/main.92caa018.css",
-    "main.js": "/empire-slice/static/js/main.f435058e.js",
+    "main.js": "/empire-slice/static/js/main.e01f258e.js",
     "Home.js": "/empire-slice/static/js/Home.bd1953db.chunk.js",
     "Cart.js": "/empire-slice/static/js/Cart.ee2f65e6.chunk.js",
     "PizzaInfo.css": "/empire-slice/static/css/PizzaInfo.a061acb8.chunk.css",
-    "PizzaInfo.js": "/empire-slice/static/js/PizzaInfo.a4544320.chunk.js",
+    "PizzaInfo.js": "/empire-slice/static/js/PizzaInfo.61b2ec89.chunk.js",
     "NotFound.js": "/empire-slice/static/js/NotFound.c3bb4e9b.chunk.js",
     "static/media/empty-cart.png": "/empire-slice/static/media/empty-cart.db905d1f4b063162f25b.png",
     "static/media/logo.svg": "/empire-slice/static/media/logo.65fe03c95e179372cce4d0eed242bed4.svg",
     "index.html": "/empire-slice/index.html",
     "main.92caa018.css.map": "/empire-slice/static/css/main.92caa018.css.map",
-    "main.f435058e.js.map": "/empire-slice/static/js/main.f435058e.js.map",
+    "main.e01f258e.js.map": "/empire-slice/static/js/main.e01f258e.js.map",
     "Home.bd1953db.chunk.js.map": "/empire-slice/static/js/Home.bd1953db.chunk.js.map",
     "Cart.ee2f65e6.chunk.js.map": "/empire-slice/static/js/Cart.ee2f65e6.chunk.js.map",
     "PizzaInfo.a061acb8.chunk.css.map": "/empire-slice/static/css/PizzaInfo.a061acb8.chunk.css.map",
-    "PizzaInfo.a4544320.chunk.js.map": "/empire-slice/static/js/PizzaInfo.a4544320.chunk.js.map",
+    "PizzaInfo.61b2ec89.chunk.js.map": "/empire-slice/static/js/PizzaInfo.61b2ec89.chunk.js.map",
     "NotFound.c3bb4e9b.chunk.js.map": "/empire-slice/static/js/NotFound.c3bb4e9b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.92caa018.css",
-    "static/js/main.f435058e.js"
+    "static/js/main.e01f258e.js"
   ]
 }
