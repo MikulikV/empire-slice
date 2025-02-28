@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkempire_slice=self.webpackChunkempire_slice||[]).push([[187],{4949:function(e,r,n){n.r(r);n(2791);var s=n(5838),c=n(184);r.default=function(){return(0,c.jsx)(c.Fragment,{children:(0,c.jsx)(s.vr,{})})}}}]);
+//# sourceMappingURL=NotFound.c3bb4e9b.chunk.js.map
